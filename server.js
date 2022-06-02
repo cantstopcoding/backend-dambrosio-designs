@@ -34,11 +34,11 @@ app.use('/api/orders', orderRouter);
 
 const __dirname = path.resolve();
 app.use(
-  express.static(path.join(__dirname, '/frontend-dambrosio-designs/build'))
+  express.static(path.join(__dirname, '../frontend-dambrosio-designs/build'))
 );
 app.get('*', (req, res) =>
   res.sendFile(
-    path.join(__dirname, '/frontend-dambrosio-designs/build/index.html')
+    path.join(__dirname, '../frontend-dambrosio-designs/build/index.html')
   )
 );
 
